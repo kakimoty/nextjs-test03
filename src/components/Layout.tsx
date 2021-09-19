@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { memo } from 'react'
 import { ToastContainer } from 'react-toastify'
 
-export const Layout = memo(({ children }) => {
+export const Layout: React.FunctionComponent = memo(({ children }) => {
   return (
     <div>
       <Head>
