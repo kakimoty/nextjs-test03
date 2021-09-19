@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { memo } from 'react'
 import { ToastContainer } from 'react-toastify'
-import { SysConst } from '../lib/SysConst'
 
 export const Layout = memo(({ children }) => {
   return (
@@ -11,8 +10,12 @@ export const Layout = memo(({ children }) => {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </Head>
 
+      {/* Header */}
+
       {/* Body */}
       {children}
+
+      {/* Footer */}
 
       {/* React-Toastify */}
       <div className="container mb-5 pb-5">
