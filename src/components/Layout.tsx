@@ -4,10 +4,10 @@ import { ToastContainer } from 'react-toastify'
 export const Layout = memo(({ children }) => {
   return (
     <div>
-      {/* 本文 */}
+      {/* Body */}
       {children}
 
-      {/* トースト */}
+      {/* React-Toastify */}
       <div className="container mb-5 pb-5">
         <ToastContainer />
       </div>

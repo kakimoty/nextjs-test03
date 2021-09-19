@@ -13,4 +13,5 @@ function MyApp({ Component, pageProps }: AppProps) {
     </RecoilRoot>
   )
 }
+
 export default MyApp
