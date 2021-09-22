@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Layout } from 'src/components/Layout'
@@ -9,10 +10,11 @@ const Home: NextPage = () => {
       <Head>
         <title>{SysConst.AppName}</title>
         <meta name="description" content="" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
 
       <Layout>
-        <div>{SysConst.AppName + ' ' + SysConst.AppVersion}</div>
+        <Button variant="contained">Hello World</Button>
       </Layout>
     </div>
   )
