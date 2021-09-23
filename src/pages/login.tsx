@@ -4,8 +4,9 @@ import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import { Layout } from '../components/Layout'
+import { SysConst } from '../lib/SysConst'
 
-export default function SignUp() {
+export default function Login() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
@@ -16,6 +17,7 @@ export default function SignUp() {
     })
   }
 
+  // return
   return (
     <Layout>
       <Box
@@ -27,7 +29,7 @@ export default function SignUp() {
         }}
       >
         <Typography component="h1" variant="h5">
-          ICTSSS ログイン
+          {SysConst.AppName} ログイン
         </Typography>
 
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
