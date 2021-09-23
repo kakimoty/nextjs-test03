@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import dayjs from 'dayjs'
 import 'dayjs/locale/ja'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import { RecoilRoot } from 'recoil'
 import createEmotionCache from '../styles/createEmotionCache'
 import '../styles/globals.css'
@@ -23,14 +24,19 @@ function MyApp(props: MyAppProps) {
 
   return (
     <>
-      <RecoilRoot>
-        <CacheProvider value={emotionCache}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
+      <CacheProvider value={emotionCache}>
+        <Head>
+          <title></title>
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+        </Head>
+
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <RecoilRoot>
             <Component {...pageProps} />
-          </ThemeProvider>
-        </CacheProvider>
-      </RecoilRoot>
+          </RecoilRoot>
+        </ThemeProvider>
+      </CacheProvider>
     </>
   )
 }
