@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography'
 // import Link from '@mui/material/Link'
 import Link from 'next/link'
 import { memo } from 'react'
+import { SysConst } from '../lib/SysConst'
 
 export const Layout: React.FunctionComponent = memo(({ children }) => {
   return (
@@ -14,7 +15,7 @@ export const Layout: React.FunctionComponent = memo(({ children }) => {
         <Toolbar style={{ minHeight: '50px' }}>
           {/* <CameraIcon sx={{ mr: 2 }} /> */}
           <Typography variant="h6" color="inherit" noWrap>
-            ICTSSS ver0.1
+            {SysConst.AppName} {SysConst.AppVersion}
           </Typography>
 
           {/* 機能ボタン */}
