@@ -4,7 +4,6 @@ import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { memo, useState } from 'react'
-
 import { SysConst } from '../lib/SysConst'
 
 export const Layout: React.FunctionComponent = memo(({ children }) => {
