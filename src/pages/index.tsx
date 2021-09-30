@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Layout } from 'src/components/Layout'
+
 import { SysConst } from '../lib/SysConst'
 
 const Home: NextPage = () => {

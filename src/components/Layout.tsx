@@ -4,6 +4,7 @@ import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { memo, useState } from 'react'
+
 import { SysConst } from '../lib/SysConst'
 
 export const Layout: React.FunctionComponent = memo(({ children }) => {
@@ -37,7 +38,7 @@ export const Layout: React.FunctionComponent = memo(({ children }) => {
               // color="primary"
               style={{ color: '#FFFFFF' }}
             >
-              Dashboard
+              レポート
             </Button>
             <Menu
               id="demo-positioned-menu"
@@ -54,8 +55,8 @@ export const Layout: React.FunctionComponent = memo(({ children }) => {
                 horizontal: 'left',
               }}
             >
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>My account</MenuItem>
+              <MenuItem>レポート一覧</MenuItem>
+              <MenuItem>レポート作成</MenuItem>
               <MenuItem>Logout</MenuItem>
             </Menu>
           </nav>
