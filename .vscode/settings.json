@@ -1,12 +1,14 @@
 {
-  "files.exclude": {
-    "**/node_modules": true
-  },
+  // "files.exclude": {
+  //   "**/node_modules": true
+  // },
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
-  }
+    "source.fixAll.eslint": true
+  },
+  "explorer.compactFolders": false,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true
 }

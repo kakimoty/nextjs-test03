@@ -1,5 +1,5 @@
 export namespace SysConst {
-  export const AppName = 'ICTSSS'
+  export const AppName = 'nextjs-test02'
   export const AppVersion = 'α1'
 
   export const TitleColor = '#F5B66F'
