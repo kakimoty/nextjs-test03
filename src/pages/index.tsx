@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import type { NextPage } from 'next'
 
+import { Box, chakra } from '@chakra-ui/react'
+
 import { Layout } from 'src/components/Layout'
 import { SysConst } from '../lib/SysConst'
 
@@ -12,7 +14,9 @@ const Home: NextPage = () => {
       </Head>
 
       <Layout>
-        <div>test</div>
+        <Box>
+          <chakra.h1 color="tomato">Hello World!</chakra.h1>
+        </Box>
       </Layout>
     </div>
   )
