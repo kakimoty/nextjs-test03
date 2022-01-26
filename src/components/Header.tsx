@@ -17,11 +17,14 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import { FaChalkboardTeacher } from 'react-icons/fa'
+import { MdCalendarViewMonth, MdMoreTime } from 'react-icons/md'
+import { IconType } from 'react-icons/lib'
 
 import { SysConst } from '../lib/SysConst'
 
+// Header
 export const Header = memo(() => {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -81,9 +84,9 @@ export const Header = memo(() => {
 
         <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
           <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
+            ログイン
           </Button>
-          <Button
+          {/* <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
@@ -94,8 +97,8 @@ export const Header = memo(() => {
               bg: 'pink.300',
             }}
           >
-            Sign Up
-          </Button>
+            ログイン
+          </Button> */}
         </Stack>
       </Flex>
 
@@ -106,11 +109,13 @@ export const Header = memo(() => {
   )
 })
 
+// DesktopNav
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
   const linkHoverColor = useColorModeValue('gray.800', 'white')
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
+  // return
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
@@ -137,8 +142,8 @@ const DesktopNav = () => {
                 border={0}
                 boxShadow={'xl'}
                 bg={popoverContentBgColor}
-                p={4}
-                rounded={'xl'}
+                p={2}
+                // rounded={'xl'}
                 minW={'sm'}
               >
                 <Stack>
@@ -155,17 +160,19 @@ const DesktopNav = () => {
   )
 }
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+// DesktopSubNav
+const DesktopSubNav = ({ label, href, subLabel, icon }: NavItem) => {
   return (
     <Link
       href={href}
       role={'group'}
       display={'block'}
       p={2}
-      rounded={'md'}
+      // rounded={'md'}
       _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
     >
       <Stack direction={'row'} align={'center'}>
+        <Icon as={icon as unknown as IconType} />
         <Box>
           <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
             {label}
@@ -180,14 +187,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}
-        >
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
+        ></Flex>
       </Stack>
     </Link>
   )
 }
 
+// MobileNav
 const MobileNav = () => {
   return (
     <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
@@ -198,6 +204,7 @@ const MobileNav = () => {
   )
 }
 
+// MobileNavItem
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -248,13 +255,16 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   )
 }
 
+// NavItem
 interface NavItem {
   label: string
   subLabel?: string
+  icon?: IconType
   children?: Array<NavItem>
   href?: string
 }
 
+// NAV_ITEMS
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'マイページ',
@@ -265,12 +275,12 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: '訪問予定表',
-        // subLabel: 'Find your dream design job',
+        icon: MdCalendarViewMonth,
         href: '#',
       },
       {
         label: '訪問予定表作成',
-        // subLabel: 'An exclusive list for contract work',
+        icon: MdMoreTime,
         href: '#',
       },
     ],
@@ -280,12 +290,10 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'レポート一覧',
-        // subLabel: 'Trending Design to inspire you',
         href: '#',
       },
       {
         label: 'レポート作成',
-        // subLabel: 'Up-and-coming Designers',
         href: '#',
       },
     ],
@@ -295,7 +303,6 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: '支援時間集計',
-        // subLabel: 'Trending Design to inspire you',
         href: '#',
       },
     ],
