@@ -1,7 +1,5 @@
 import { memo } from 'react'
 
-import { Center } from '@chakra-ui/react'
-
 import { Header } from './Header'
 
 export const Layout: React.FunctionComponent = memo(({ children }) => {
@@ -11,7 +9,7 @@ export const Layout: React.FunctionComponent = memo(({ children }) => {
       <Header />
 
       {/* Body */}
-      <Center h="100%">{children}</Center>
+      {children}
       {/* Footer */}
 
       {/* React-Toastify */}

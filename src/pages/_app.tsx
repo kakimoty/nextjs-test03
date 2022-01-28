@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app'
 import dayjs from 'dayjs'
 import 'dayjs/locale/ja'
 import { RecoilRoot } from 'recoil'
-import { ChakraProvider } from '@chakra-ui/react'
 
 import '../styles/globals.css'
 
@@ -18,9 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <RecoilRoot>
-        <ChakraProvider>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        <Component {...pageProps} />
       </RecoilRoot>
     </>
   )
