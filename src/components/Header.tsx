@@ -1,8 +1,5 @@
 import { memo, useEffect } from 'react'
 
-import { FaChalkboardTeacher } from 'react-icons/fa'
-import { MdCalendarViewMonth, MdMoreTime } from 'react-icons/md'
-
 import { SysConst } from '../lib/SysConst'
 
 // Header
