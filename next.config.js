@@ -11,6 +11,6 @@ module.exports = withBundleAnalyzer({
     ignoreDuringBuilds: true,
     dirs: ['src/pages/', 'src/components/', 'src/lib/', 'src/hooks', 'src/models'],
   },
-  swcMinify: false,
+  swcMinify: true,
   webpack5: true,
 })

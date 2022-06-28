@@ -12,20 +12,21 @@
   "dependencies": {
     "dayjs": "^1.10.7",
     "next": "^12.0.9",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.3.1",
-    "react-toastify": "^8.1.0",
-    "recoil": "^0.5.2"
+    "react-toastify": "^9.0.5",
+    "recoil": "^0.7.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@next/bundle-analyzer": "^12.0.9",
-    "@types/node": "^17.0.13",
-    "@types/react": "^17.0.38",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "autoprefixer": "^10.4.2",
+    "babel-eslint": "^10.1.0",
     "eslint": "^8.8.0",
     "eslint-config-next": "^12.0.9",
     "eslint-config-prettier": "^8.3.0",
